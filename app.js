@@ -41,7 +41,7 @@ mongoose.connect(url, options)
 
 // app use all package
 app.use(cookieParser());
-app.use(cors());
+app.use(cors({ origin: ['http://localhost:2020', 'https://mernback-q1el.onrender.com'], credentials: true }));
 app.use(helmet());
 app.use(mongoSanitize());
 app.use(xss());
